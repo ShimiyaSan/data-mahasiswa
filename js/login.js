@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const password = document.getElementById("loginPassword").value;
 
     // Assume users.json contains user data in the format shown above
-    fetch("/pengguna.json")
+    fetch("./pengguna.json")
       .then((response) => response.json())
       .then((data) => {
         const users = data.users;
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
           showLoading(); // Tampilkan animasi loading
           setTimeout(function () {
             // Redirect ke halaman utama setelah 2 detik
-            window.location.href = "/home.html";
+            window.location.href = "./home.html";
           }, 2000);
         } else {
           alert("Username atau password salah.");

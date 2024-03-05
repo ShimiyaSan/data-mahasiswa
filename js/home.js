@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/data_mahasiswa.json")
+  fetch("./data_mahasiswa.json")
     .then((response) => response.json())
     .then((data) => {
       applyStyles(data.styles);
